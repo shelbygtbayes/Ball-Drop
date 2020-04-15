@@ -1,0 +1,21 @@
+.target-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  canvas {
+    border: 1px solid gray;
+  }
+  
+  .wrapper {
+    margin: 20px;
+  }
+  
+  .target-wrapper > div {
+    position: relative;
+  }
+  

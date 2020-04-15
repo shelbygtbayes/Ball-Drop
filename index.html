@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ball Drop</title>
+    <script language="javascript" type="text/javascript" src = "https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src = "https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+    <script language="javascript" type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+    <link rel="stylesheet" href="Toggle.css">
+  
+<style>
+        body {padding: 0; margin: 0;}
+</style>
+  </head>
+  <body style="background-color:black;">
+
+    <script language="javascript" type="text/javascript" src = "sketch.js"></script>
+    <script language="javascript" type="text/javascript" src = "Plinko.js"></script>
+    <script language="javascript" type="text/javascript" src = "Particle.js"></script>
+    <script language="javascript" type="text/javascript" src = "Boundary.js"></script>
+    <script language="javascript" type="text/javascript" src = "Bucket.js"></script>
+    
+    <body>
+      <div class="menu" style="background-color: black">
+        <div class="toggle" onclick="expand()">
+          <i class="material-icons" id="toggle">
+              add
+          </i>
+        </div>
+        <div class="items" id="items">
+          
+          <a href="#"  onclick="keyTyped('b')">    
+             <span>B</span> 
+          </a>
+          <a href="#" onclick="keyTyped('s')">
+            <span>S</span>
+          </a>
+          <a href="#" onclick="keyTyped('g')">
+            <span>G</span>
+          </a>
+          <a href="#" onclick="keyTyped('r')">
+            <span>R</span>
+          </a>
+        <!----  <a href="#" onclick=" runAnalysis()">
+            <span>A</span>
+          </a>
+        -->
+
+      </div>
+      </div>
+      <script type="text/javascript">
+          var state = false;
+          function expand(){
+              if(state == false)
+              {
+                  document.getElementById("items").style.transform = 'scaleY(1)';
+                  document.getElementById("toggle").style.transform='rotate(45deg)';
+                  state = true;
+              }
+              else
+              {
+                  document.getElementById("items").style.transform = 'scaleY(0)';
+                  document.getElementById("toggle").style.transform='rotate(0deg)';
+                  state = false;
+              }
+          }
+      </script>
+      
+  </body>
+</html>
